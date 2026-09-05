@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,293 +8,308 @@
 </head>
 
 <body>
-    <!-- ----------------------Login Page------------------------>
 
-    <section id="loginPage" class="page">
-        <header>
-            <h1>Smart Educational Platform</h1>
-            <p>Learn . Practice . improve</p>
-        </header>
+<!-- ================= LOGIN PAGE ================= -->
 
-        <div class="login-box">
-            <h2>Login</h2>
-            <input type="text" id="username" placeholder="Enter Username">
-            <input type="password" id="password" placeholder="Enter password">
-            <div class="role-buttons">
-                <button id="studentRole">Student</button>
-                <button id="teacherRole">Teacher</button>
-            </div>
-            <button id="loginBtn">Login</button>
-            <p id="loginMessage"></p>
+<section id="loginPage" class="page active">
+    <div class="login-box">
+        <h1>Smart Educational Platform</h1>
+        <p>Login to continue</p>
+
+        <input type="text" id="username" placeholder="Enter username">
+        <input type="password" id="password" placeholder="Enter password">
+
+        <div class="role-box">
+            <button id="studentRole" class="role-btn selected">Student</button>
+            <button id="teacherRole" class="role-btn">Teacher</button>
         </div>
-    </section>
 
-    <!-- --------------------------Student Dashboard---------------------------------------->
+        <button id="loginBtn" class="main-btn">Login</button>
 
-    <section id="studentPage" class="page">
-        <nav>
-            <h2>Smart Education</h2>
-            <div class="nav-links">
-                <button id="homeBtn">Home</button>
-                <button id="subjectsnavBtn">Subjects</button>
-                <button id="logoutBtn">Logout</button>
-            </div>
-        </nav>
+        <p id="loginMessage"></p>
+    </div>
+</section>
 
-        <main>
 
-            <section class="welcome">
-                <h1>Welcome,<span id="studentName">Student</span>👋</h1>
-                <p>Check your learning Progress</p>
-            </section>
-            <!-- --------------------------------------performance----------------------------->
-            <section class="performance">
-                <div class="card">
-                    <h3>Recent Quiz Score</h3>
-                    <p id="recentSCore">8/10</p>
-                </div>
-                <div class="card">
-                    <h3>Average Score</h3>
-                    <p id="averageScore">78%</p>
-                </div>
-            </section>
+<!-- ================= STUDENT DASHBOARD ================= -->
 
-            <!-- ---------------------------------------Top Students----------------------------------- -->
+<section id="studentPage" class="page">
 
-            <section class="dashboard-section">
-                <h2>Top Student</h2>
-                <div id="topStudents">
-                    <p>1. Akhand _ 92%</p>
-                    <p>2. Aanchal _ 88%</p>
-                    <p>3. Kuldeep _ 86%</p>
-                </div>
-            </section>
-            <!-- ---------------------------------Weak Topics---------------------------------- -->
-            <section class="dashboard-section">
-                <h2>Weak Topics</h2>
-                <div id="weakTopics">
-                    <p>Data Structer - Binary Search</p>
-                    <p>DAA - Algorithem</p>
-                    <p>DBMS - Normalization</p>
-                </div>
-            </section>
-            <!-- ------------------------------------Subjects------------------------------------ -->
-            <section class="dashboard-section">
-                <h2>Your Subjects</h2>
-                <div class="subjects">
-                    <button class="subject-btn" data-subject="Data Structure">Data Structure</button>
-                    <button class="subject-btn" data-subject="COA">COA</button>
-                    <button class="subject-btn" data-subject="DBMS">DBMS</button>
-                    <button class="subject-btn" data-subject="Operating System">Operating System</button>
-                    <button class="subject-btn" data-subject="Mathematics">Mathematics</button>
+    <nav>
+        <h2>Student Dashboard</h2>
+        <div>
+            <button id="studentHomeBtn">Home</button>
+            <button id="subjectsNavBtn">Subjects</button>
+            <button id="studentLogoutBtn">Logout</button>
+        </div>
+    </nav>
 
-                </div>
-            </section>
-        </main>
-    </section>
-    <!-- ---------------------------------------------------Subject page----------------------------------- -->
-    <section id="subjectsPages" class="page">
-        <nav>
-            <h2>Smart Education</h2>
-            <div>
-                <button id="subjectHomeBtn">Home</button>
-                <button id="subjectLogoutBtn">Logout</button>
-            </div>
-        </nav>
-        <main>
-            <h1>Select Your Subject</h1>
-            <p>Your Year : <strong id="studentYear">2nd year</strong></p>
-            <div class="subject-list">
-                <article class="subject-card">
-                    <h2>Data Structure</h2>
-                    <p>Learn and test your Data Structure Knowledge.</p>
-                    <button class="open-Subject" data-subject="Data Structer">Open Subject</button>
-                </article>
-                <article class="subject-card">
-                    <h2>DBMS</h2>
-                    <p>DataBase Managment System</p>
-                    <button class="open-Subject" data-subject="DBMS">Open Subject</button>
-                </article>
-                <article class="subject-card">
-                    <h2>Operating System</h2>
-                    <p>Learn importent os concept. </p>
-                    <button class="open-Subject" data-subject="OS">Open Subject</button>
-                </article>
-                <article class="subject-card">
-                    <h2>Mathematics</h2>
-                    <p>Practice and solve Mathematics concept. </p>
-                    <button class="open-Subject" data-subject="Mathematics">Open Subject</button>
-                </article>
-                <article class="subject-card">
-                    <h2>DAA</h2>
-                    <p>Learn importent Algo concept. </p>
-                    <button class="open-Subject" data-subject="DAA">Open Subject</button>
-                </article>
-            </div>
-        </main>
+    <div class="container">
+        <h1>Welcome, <span id="studentName">Student</span> 👨‍🎓</h1>
 
-    </section>
-    <!-- --------------------------------------unit / topic page-------------------------------------------- -->
-    <section id="subjectPage" class="page">
-        <nav>
-            <h2><span id="selectSubjects">Data Structer</span></h2>
-            <button backToSubjects>Back to subjects</button>
-        </nav>
-        <main>
-            <h1 id="subjectTitle">Data Structure</h1>
-            <section class="unit">
-                <h2>Unit 1</h2>
-                <div class="topic-card">
-                    <h3>Arrays</h3>
-                    <p>Introduction to Arrays</p>
-                    <button class="topic-btn" data-topic="Arrays">Start Topic</button>
-                </div>
-                <div class="topic-card">
-                    <h3>Linked List</h3>
-                    <p>Introduction to Linked List</p>
-                    <button class="topic-btn" data-topic="Linked List">Start Topic</button>
-                </div>
-            </section>
-            <section class="unit">
-                <h2>Unit 2</h2>
-                <div class="topic-card">
-                    <h3>Stack</h3>
-                    <p>LIFO based data Structure</p>
-                    <button class="topic-btn" data-topic="Stack">Start Topic</button>
-                </div>
-                <div class="topic-card">
-                    <h3>Queue</h3>
-                    <p>FIFO based data Structure</p>
-                    <button class="topic-btn" data-topic="Queue">Start Topic</button>
-                </div>
-            </section>
-        </main>
-    </section>
-    <!-- ----------------------------------Quiz page------------------------------------------------ -->
-    <section id="quizPage" class="page">
-        <nav>
-            <h2>Smart Education Quiz</h2>
-            <span id="quizTopic">Arrays</span>
-        </nav>
-        <main class="quiz-container">
-            <div class="quiz-info">
-                <p>Question<span id="questionNumber">1</span>/<span id="totalQuestions">10</span></p>
-                <p>Score : <span id="currentScore">0</span></p>
-            </div>
-            <div class="question-Box">
-                <h2 id="question">Which Data Structure follows LIFO?</h2>
-                <div class="options">
-                    <label class="option"><input type="radio" name="answer" value="Queue"><span
-                            id="option1">Queue</span></label>
-                    <label class="option"><input type="radio" name="answer" value="Stack"><span
-                            id="option1">Stack</span></label>
-                    <label class="option"><input type="radio" name="answer" value="Tree"><span
-                            id="option1">Tree</span></label>
-                    <label class="option"><input type="radio" name="answer" value="Array"><span
-                            id="option1">Array</span></label>
-                </div>
-                <button id="nextBtn">Next</button>
-            </div>
-        </main>
-    </section>
-    <!-- ------------------------------------------Result Page------------------------------------------------- -->
-    <section id="resultPage" class="page">
-        <main class="result-container">
-            <h1>Quiz Completed 🎉</h1>
-            <div class="result-card">
-                <h2>Your Score</h2>
-                <p id="finalScore"> 8 / 10 </p>
-                <p>Correct : <span id="correctAnswers">8</span></p>
-                <p>Wrong : <span id="wrongAnswers">2</span></p>
-            </div>
-            <!-- ------------------------weak Topics---------------------------------- -->
-            <div class="weak-topic-result">
-                <h2>Topic to Improve</h2>
-                <p id="resultWeakTopic">Arrays</p>
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Recent Score</h3>
+                <p id="recentScore">0</p>
             </div>
 
-            <div class="explanation">
-                <h2>Answer Explanation</h2>
-                <div id="answerExplanation">
-                    <p>Explanation will appear here after the quiz.</p>
-                </div>
+            <div class="card">
+                <h3>Average Score</h3>
+                <p id="averageScore">0%</p>
             </div>
-            <div class="result-buttons">
-                <button>
-                    <div id="retryBtn">Try Again</div>
-                </button>
-                <button>
-                    <div id="resultHomeBtn">Dashboard</div>
-                </button>
-            </div>
-        </main>
-    </section>
-    <!-- -------------------------------------Teacher Dashboard---------------------------------------- -->
-    <section id="teacherPage" class="page">
-        <nav>
-            <h2>Smart Education</h2>
-            <div>
-                <button id="teacherHomeBtn">Home</button>
-                <button id="teacherLogoutBtn">Logout</button>
-            </div>
-        </nav>
-        <main>
-            <section class="welcome">
-                <h1>Welcome, Teacher</h1>
-                <p>Monitor your students' learning performance.</p>
-            </section>
-            <section class="performance">
-                <div class="card">
-                    <h3>Total Students</h3>
-                    <p id="totalStudents">60</p>
-                </div>
-                <div class="card">
-                    <h3>Class Average</h3>
-                    <p id="classAverage">72%</p>
-                </div>
-            </section>
-            <section class="dashboard-section">
-                <h2>Student performance</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Student</th>
-                            <th>Subject</th>
-                            <th>Score</th>
-                        </tr>
-                    </thead>
-                    <tbody id="studentData">
-                        <tr>
-                            <td>Amit</td>
-                            <td>DBMS</td>
-                            <td>8/10</td>
-                        </tr>
-                        <tr>
-                            <td>Karan</td>
-                            <td>DBMS</td>
-                            <td>9/10</td>
-                        </tr>
-                        <tr>
-                            <td>Avanish</td>
-                            <td>DBMS</td>
-                            <td>7/10</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+        </div>
+
+        <h2>Subjects</h2>
+
+        <div class="subject-grid">
+            <button class="subject-btn">Data Structure</button>
+            <button class="subject-btn">COA</button>
+            <button class="subject-btn">DBMS</button>
+            <button class="subject-btn">Operating System</button>
+            <button class="subject-btn">Mathematics</button>
+            <button class="subject-btn">DAA</button>
+        </div>
+    </div>
+</section>
 
 
-            <section class="dashboard-section">
-                <h2>Class Weak Topics</h2>
-                <div id="classWeakTopics">
-                    <p>DBMS - Normalization -> 62% Incorrect</p>
-                    <p>DS - Stack -> 48% Incorrect</p>
-                    <p>OS - Process -> 32% Incorrect</p>
-                </div>
-            </section>
-        </main>
-    </section>
-    <script src="script.js"></script>
+<!-- ================= SUBJECTS PAGE ================= -->
+
+<section id="subjectsPage" class="page">
+
+    <nav>
+        <h2>Subjects</h2>
+        <div>
+            <button id="subjectsHomeBtn">Home</button>
+            <button id="subjectsLogoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Choose a Subject</h1>
+
+        <p>Student: <b id="studentYear">Student</b></p>
+
+        <div class="subject-grid">
+            <button class="open-subject">Data Structure</button>
+            <button class="open-subject">COA</button>
+            <button class="open-subject">DBMS</button>
+            <button class="open-subject">Operating System</button>
+            <button class="open-subject">Mathematics</button>
+            <button class="open-subject">DAA</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= TOPIC PAGE ================= -->
+
+<section id="subjectPage" class="page">
+
+    <nav>
+        <h2 id="selectedSubjectName">Subject</h2>
+    </nav>
+
+    <div class="container">
+
+        <button id="backToSubjects" class="back-btn">
+            ← Back to Subjects
+        </button>
+
+        <h1 id="subjectTitle">Topics</h1>
+
+        <div id="topicContainer" class="topic-grid"></div>
+
+    </div>
+</section>
+
+
+<!-- ================= QUIZ PAGE ================= -->
+
+<section id="quizPage" class="page">
+
+    <div class="quiz-box">
+
+        <h2 id="quizTopic">Quiz</h2>
+
+        <p>
+            Question <span id="questionNumber">1</span>
+            /
+            <span id="totalQuestions">5</span>
+        </p>
+
+        <p>Score: <span id="currentScore">0</span></p>
+
+        <h2 id="question">Question</h2>
+
+        <div class="options">
+
+            <label>
+                <input type="radio" name="answer" value="0">
+                <span id="option1">Option 1</span>
+            </label>
+
+            <label>
+                <input type="radio" name="answer" value="1">
+                <span id="option2">Option 2</span>
+            </label>
+
+            <label>
+                <input type="radio" name="answer" value="2">
+                <span id="option3">Option 3</span>
+            </label>
+
+            <label>
+                <input type="radio" name="answer" value="3">
+                <span id="option4">Option 4</span>
+            </label>
+
+        </div>
+
+        <button id="nextBtn" class="main-btn">Next</button>
+
+    </div>
+</section>
+
+
+<!-- ================= RESULT PAGE ================= -->
+
+<section id="resultPage" class="page">
+
+    <div class="result-box">
+
+        <h1>Quiz Result 🎉</h1>
+
+        <h2>
+            Score:
+            <span id="finalScore">0</span>
+        </h2>
+
+        <p>
+            Correct Answers:
+            <b id="correctAnswers">0</b>
+        </p>
+
+        <p>
+            Wrong Answers:
+            <b id="wrongAnswers">0</b>
+        </p>
+
+        <p>
+            Weak Topic:
+            <b id="resultWeakTopic">None</b>
+        </p>
+
+        <div class="explanation">
+            <h3>Explanation</h3>
+            <p id="answerExplanation">
+                Quiz completed.
+            </p>
+        </div>
+
+        <button id="retryBtn" class="main-btn">Retry Quiz</button>
+        <button id="resultHomeBtn" class="secondary-btn">
+            Dashboard
+        </button>
+
+    </div>
+</section>
+
+
+<!-- ================= TEACHER PAGE ================= -->
+
+<section id="teacherPage" class="page">
+
+    <nav>
+        <h2>Teacher Dashboard</h2>
+
+        <div>
+            <button id="teacherHomeBtn">Home</button>
+            <button id="teacherLogoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>
+            Welcome,
+            <span id="teacherName">Teacher</span>
+            👨‍🏫
+        </h1>
+
+        <div class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">30</p>
+            </div>
+
+            <div class="card">
+                <h3>Class Average</h3>
+                <p id="classAverage">72%</p>
+            </div>
+
+        </div>
+
+        <h2>Student Performance</h2>
+
+        <input
+            type="text"
+            id="studentSearch"
+            placeholder="Search student..."
+        >
+
+        <div id="studentData" class="student-list">
+
+            <div class="student-row">
+                <span>Rahul</span>
+                <span>82%</span>
+            </div>
+
+            <div class="student-row">
+                <span>Priya</span>
+                <span>76%</span>
+            </div>
+
+            <div class="student-row">
+                <span>Aman</span>
+                <span>61%</span>
+            </div>
+
+            <div class="student-row">
+                <span>Neha</span>
+                <span>88%</span>
+            </div>
+
+        </div>
+
+        <h2>Class Weak Topics</h2>
+
+        <div id="classWeakTopics" class="weak-topic">
+            <p>DBMS - Normalization</p>
+            <p>COA - CPU Organization</p>
+            <p>DAA - Time Complexity</p>
+        </div>
+
+        <h2>Teacher Announcement</h2>
+
+        <input
+            type="text"
+            id="announcementInput"
+            placeholder="Write announcement"
+        >
+
+        <button id="announcementBtn" class="main-btn">
+            Add Announcement
+        </button>
+
+        <div id="announcementList"></div>
+
+    </div>
+</section>
+
+
+<script src="script.js"></script>
+
 </body>
-
 </html>

@@ -1,5 +1,443 @@
-*{
-    padding: 0;
+/* ================= BASIC ================= */
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f7f5;
+    color: #222;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* ================= LOGIN ================= */
+
+#loginPage {
+    min-height: 100vh;
+    background: #176b3a;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#loginPage.active {
+    display: flex;
+}
+
+.login-box {
+    width: 400px;
+    max-width: 100%;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.login-box h1 {
+    color: #176b3a;
+    margin-bottom: 8px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.role-box {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.role-btn {
+    flex: 1;
+    padding: 11px;
+    border: 1px solid #176b3a;
+    background: white;
+    color: #176b3a;
+    border-radius: 6px;
+}
+
+.role-btn.selected {
+    background: #176b3a;
+    color: white;
+}
+
+
+/* ================= GREEN NAVBAR ================= */
+
+nav {
+    background: #176b3a;
+    color: white;
+    min-height: 55px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h2 {
+    font-size: 20px;
+}
+
+nav button {
+    background: white;
+    color: #176b3a;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+
+/* ================= WELCOME BOX ================= */
+/* फोटो में सबसे ऊपर वाला बड़ा सफेद डब्बा */
+
+.container > h1 {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin-bottom: 20px;
+}
+
+.container > h1 span {
+    color: #176b3a;
+}
+
+
+/* ================= SCORE BOXES ================= */
+/* फोटो में Total Students / Class Average जैसे दो डब्बे */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.card p {
+    color: #176b3a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.container > h2 {
+    background: white;
+    padding: 16px 20px;
+    margin-top: 20px;
+    border-radius: 8px 8px 0 0;
+    color: #333;
+}
+
+
+/* ================= SUBJECT BOXES ================= */
+
+.subject-grid {
+    background: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+.subject-btn,
+.open-subject {
+    background: #f8fbf9;
+    border: 2px solid #176b3a;
+    color: #176b3a;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.subject-btn:hover,
+.open-subject:hover {
+    background: #176b3a;
+    color: white;
+}
+
+
+/* ================= TOPIC BOXES ================= */
+
+.topic-grid {
+    background: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+.topic-grid button {
+    background: #f8fbf9;
+    border: 2px solid #176b3a;
+    color: #176b3a;
+    padding: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.topic-grid button:hover {
+    background: #176b3a;
+    color: white;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn {
+    background: white;
+    color: #176b3a;
+    border: 1px solid #176b3a;
+    padding: 9px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* ================= QUIZ BOX ================= */
+
+.quiz-box {
+    width: 90%;
+    max-width: 650px;
+    margin: 45px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.quiz-box h2 {
+    color: #176b3a;
+    margin-bottom: 15px;
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.options label {
+    display: block;
+    background: #f5f8f6;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.options label:hover {
+    border-color: #176b3a;
+}
+
+
+/* ================= COMMON GREEN BUTTON ================= */
+
+.main-btn {
+    width: 100%;
+    padding: 12px;
+    background: #176b3a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: white;
+    color: #176b3a;
+    border: 1px solid #176b3a;
+    border-radius: 6px;
+}
+
+
+/* ================= RESULT BOX ================= */
+
+.result-box {
+    width: 90%;
+    max-width: 600px;
+    margin: 45px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.result-box h1 {
+    color: #176b3a;
+}
+
+.explanation {
+    background: #f4f8f5;
+    padding: 18px;
+    margin: 20px 0;
+    border-left: 4px solid #176b3a;
+    text-align: left;
+}
+
+
+/* ================= TEACHER PERFORMANCE BOX ================= */
+
+.student-list {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+
+/* प्रत्येक student एक box जैसा */
+
+.student-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.student-row:last-child {
+    border-bottom: none;
+}
+
+.student-row span:first-child {
+    color: #555;
+}
+
+.student-row span:last-child {
+    color: #176b3a;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+/* ================= TEACHER INPUT ================= */
+
+#studentSearch,
+#announcementInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+#studentSearch:focus,
+#announcementInput:focus {
+    outline: none;
+    border-color: #176b3a;
+}
+
+
+/* ================= WEAK TOPIC BOX ================= */
+
+.weak-topic {
+    background: white;
+    padding: 18px 20px;
+    border-radius: 0 0 10px 10px;
+    border-left: 4px solid #176b3a;
+}
+
+.weak-topic p {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.weak-topic p:last-child {
+    border-bottom: none;
+}
+
+
+/* ================= ANNOUNCEMENT ================= */
+
+#announcementList {
+    margin-top: 15px;
+}
+
+.announcement {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #176b3a;
+    border-radius: 6px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .dashboard-cards,
+    .subject-grid,
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .container > h1 {
+        padding: 20px;
+    }
 }
